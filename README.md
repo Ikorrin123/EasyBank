@@ -10,5 +10,5 @@ show knowledge about Responsive web design. This website was made to purpose of 
 The application uses technologies such as:
 
 * Vue.js
-* CSS(SASS)
+* CSS(SCSS)
 * JavaScript
