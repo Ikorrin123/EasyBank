@@ -6,3 +6,9 @@
 
 EasyBank project is single fully responvie landing page made to represent skills in methods like mobile first and
 show knowledge about Responsive web design. This website was made to purpose of learning and develop skills.
+
+The application uses technologies such as:
+
+* Vue.js
+* CSS(SASS)
+* JavaScript
