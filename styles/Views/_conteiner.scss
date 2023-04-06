@@ -1,0 +1,355 @@
+.conteiner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  &-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("./assets/bg-intro-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25%;
+
+    img {
+      margin-top: -135px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .holder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 90%;
+      margin-bottom: 60px;
+
+      h1 {
+        @include headers;
+        margin-top: 40px;
+      }
+      p {
+        @include text-discription;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      button {
+        @include rainbowButtton;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+  &-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 25%;
+
+    .aboutHolder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 25%;
+
+        p {
+          @include text-discription;
+          inline-size: 90%;
+          text-align: center;
+          line-height: 150%;
+        }
+        h2 {
+          @include smaller-header;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    h1 {
+      @include headers;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+    p {
+      @include text-discription;
+      margin-bottom: 40px;
+    }
+  }
+
+  &-articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 25%;
+
+    h1 {
+      @include headers;
+    }
+
+    .articlesHolder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 25%;
+
+        img {
+          width: 100%;
+          height: 50%;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        p {
+          @include text-discription;
+          text-align: center;
+          font-size: 16px;
+          inline-size: 100%;
+          margin-bottom: 20px;
+        }
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          @include smaller-header;
+        }
+        span {
+          @include articleSpan;
+          margin-bottom: 20px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    span {
+      @include articleSpan;
+    }
+  }
+  &-contact {
+    display: flex;
+    background-color: hsl(233, 26%, 24%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+
+    .holderIcon {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+    }
+
+    .logo {
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(138deg)
+        brightness(103%) contrast(101%);
+    }
+
+    img {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      @include infoForPolicy;
+    }
+    button {
+      @include rainbowButtton;
+      margin-bottom: 20px;
+    }
+    span {
+      @include articleSpan;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 962px) {
+  .conteiner {
+    &-contact {
+      .holderIcon {
+        width: 30%;
+      }
+    }
+  }
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .conteiner {
+    &-home {
+      flex-direction: row;
+      background-position: right;
+      height: 20%;
+      background-color: hsl(0, 0%, 98%);
+
+      button:hover {
+        filter: brightness(150%);
+      }
+
+      img {
+        order: 2;
+        width: 50%;
+      }
+
+      .holder {
+        align-items: flex-start;
+        order: 1;
+        width: 50%;
+        margin-left: 70px;
+        margin-right: 50px;
+        height: 100%;
+
+        h1 {
+          inline-size: 70%;
+          text-align: left;
+          font-size: 3em;
+        }
+        p {
+          inline-size: 84%;
+          text-align: left;
+          line-height: 150%;
+        }
+      }
+    }
+    &-about {
+      align-items: flex-start;
+      width: 100%;
+      background-color: hsl(220, 16%, 96%);
+
+      .aboutHolder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 70px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 25%;
+          height: 100%;
+
+          p {
+            @include text-discription;
+            inline-size: 70%;
+            text-align: left;
+            line-height: 150%;
+            margin-left: 0px;
+          }
+          h2 {
+            @include smaller-header;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      p {
+        inline-size: 50%;
+        margin-left: 70px;
+      }
+      h1 {
+        margin-left: 70px;
+      }
+    }
+    &-articles {
+      align-items: flex-start;
+      background-color: hsl(0, 0%, 98%);
+      width: 100%;
+      h1 {
+        margin-top: 25px;
+        margin-left: 70px;
+      }
+      .articlesHolder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          width: 25%;
+          margin-left: 70px;
+          height: 100%;
+
+          img {
+            width: 90%;
+            height: 189px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          p {
+            inline-size: 90%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: left;
+          }
+          h2 {
+            inline-size: 90%;
+            margin-bottom: 10px;
+            text-align: left;
+            cursor: pointer;
+          }
+          h2:hover {
+            color: aquamarine;
+          }
+          span {
+            font-size: 13px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    &-contact {
+      h3:hover {
+        cursor: pointer;
+        color: aquamarine;
+      }
+
+      .holderIcon {
+        width: 25%;
+      }
+
+      button:hover {
+        filter: brightness(150%);
+      }
+    }
+  }
+}
