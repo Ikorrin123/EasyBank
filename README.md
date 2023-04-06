@@ -12,3 +12,4 @@ The application uses technologies such as:
 * Vue.js
 * CSS(SCSS)
 * JavaScript
+* RWD
